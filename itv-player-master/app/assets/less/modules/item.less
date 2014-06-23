@@ -1,0 +1,33 @@
+.item {
+	position:relative;
+	margin:10px;
+	border:1px solid @soft_color;
+	box-shadow: 0px 1px 3px @soft_color;
+	height:50px;
+	.item-image {
+		.mask {
+			position:relative;
+			overflow:hidden;
+			width:100%;
+			height:48px;
+			img {
+				position:absolute;
+				height:120%;
+			}
+		}
+	}
+	.item-info{
+		position:relative;
+		padding:5px 20px;
+		h4{
+		} 
+	}
+	.item-channel {
+		span.label {
+			position:relative;
+			font-size:@s;
+			font-family:@fontFamily_1;
+			font-weight:100;
+		}
+	}
+}
