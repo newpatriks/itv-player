@@ -27,3 +27,38 @@ Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remot
 - Give permit to my domain to let it to connect to the API
 - Make an authentication with a product key before make the call, or with a user/password account. (the best one)
 - I implemented a php file that reads the API from my domain (localhost or public one) with the cURL function. After that shows another time all the content parsed to json.
+
+
+4. More
+---
+I commented at the model the differents calls. The model that calls the API should be something like:
+
+```sh
+var getdataModel = Backbone.Model.extend({
+  url : function () {
+    return "http://mercury.itv.com/api/json/dotcom/programme/searchatoz/" + this.id;
+  },
+  initialize : function(id) {
+    this.id = id;
+  }
+});
+```
+
+But as I said, I implement a php file that parse the json and "re-print" it. This is why my model shows like:
+
+```ssh
+var getdataModel = Backbone.Model.extend({
+  url : function () {
+    return  "path/to/the/php/itv-php?param="+this.id;
+  },
+  initialize : function(id) {
+    this.id = id;
+  }
+});
+```
+
+5. About
+--
+
+* Jordi Llobet.
+* newpatriks@gmail.com
