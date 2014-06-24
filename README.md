@@ -8,6 +8,9 @@ This is an application developed using BackboneJS and Underscore. I also used le
 
 The application calls the ITV Player API passing a string parameter. The API returns all the programs that starts with the letters inside the string parameter sent.
 
+There are two main folders:
+* itv-php/: self-parser folder
+* itv-player-master/: all the backbone application
 
 2. Problems
 --
